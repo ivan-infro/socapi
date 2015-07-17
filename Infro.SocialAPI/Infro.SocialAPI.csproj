@@ -18,6 +18,8 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="mm.html" />
+    <Content Include="vk.html" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -29,7 +31,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="SocialAPI.ts" />
+    <TypeScriptCompile Include="Common\IDialogMethods.ts" />
+    <TypeScriptCompile Include="Common\IFriendsMethods.ts" />
+    <TypeScriptCompile Include="Common\ISocialApi.ts" />
+    <TypeScriptCompile Include="Common\IUser.ts" />
+    <TypeScriptCompile Include="Common\IUsersMethods.ts" />
+    <TypeScriptCompile Include="Implementation\mailru\MailruSocialApi.ts" />
+    <TypeScriptCompile Include="Implementation\mailru\MailruUsersMethods.ts" />
+    <TypeScriptCompile Include="Implementation\vk\VkSocialApi.ts" />
+    <TypeScriptCompile Include="Implementation\vk\VkUsersMethods.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Implementation\odnoklassniki\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
