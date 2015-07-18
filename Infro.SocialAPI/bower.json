@@ -1,0 +1,17 @@
+{
+    "name": "Infro.SocialAPI",
+    "version": "0.0.0",
+    "authors": [
+        "Ivan Infro (ivan@infro.su)"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/ivan-infro/socapi",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "private": true
+}
