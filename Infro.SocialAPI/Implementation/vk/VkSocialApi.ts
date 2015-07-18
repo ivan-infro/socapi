@@ -11,6 +11,9 @@ module Infro.SocialApi.Vkontakte {
             // TODO init? (getUsers work without init, but why фыва)
 
             this.users = new VkUsersMethods(this);
+            this.friends = new VkFriendsMethods();
+            this.dialog = new VkDialogMethods();
+
         }
 
         init(callback: Function): void {

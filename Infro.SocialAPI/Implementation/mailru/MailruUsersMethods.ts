@@ -1,3 +1,5 @@
+/// <reference path="../../Scripts/typings/jquery/jquery.d.ts" />
+
 module Infro.SocialApi.Mailru {
     export class MailruUsersMethods implements IUsersMethods {
         private wrapper;
@@ -6,10 +8,13 @@ module Infro.SocialApi.Mailru {
             this.wrapper = wrapper;
         }
 
-        getInfo(params, callback: Function) {
+        getInfo(params: { uids: string[] }, callback: (response: IUser[]) => void) {
             mailru.common.users.getInfo(response => {
-                callback(response);
+                var users: MailruUser[] = [];
+                $.map(response,(val, i) => users.push(new MailruUser(val)));
+
+                callback(users);
             }, params.uids);
         }
-    }    
+    }
 }

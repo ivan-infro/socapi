@@ -8,20 +8,16 @@ module Infro.SocialApi.Mailru {
         friends: IFriendsMethods;
         dialog: IDialogMethods;
 
-        constructor(key: string, callback: Function) {
+        constructor(key: string) {
             this.key = key;
 
-            this.init(() => {
-                console.log('init callback');
-
-                callback();
-            });
-
             this.users = new MailruUsersMethods(this);
+            this.friends = new MailruFriendsMethods();
+            this.dialog = new MailruDialogMethods();
         }
 
         init(callback: Function): void {
-            mailru.loader.require('api',() => {
+            mailru.loader.require("api",() => {
                 mailru.app.init(this.key);
 
                 callback();
