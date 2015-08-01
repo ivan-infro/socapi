@@ -1,4 +1,6 @@
-﻿// ReSharper disable once InconsistentNaming
+﻿/// <reference path="../../Common/ISocialApi.ts" />
+
+// ReSharper disable once InconsistentNaming
 declare var VK: any;
 
 module Infro.SocialApi.Vkontakte {

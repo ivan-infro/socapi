@@ -1,3 +1,5 @@
+/// <reference path="../../Common/ISocialApi.ts" />
+
 declare var mailru: any; 
 
 module Infro.SocialApi.Mailru {

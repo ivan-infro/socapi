@@ -1,3 +1,5 @@
+/// <reference path="UserSex.ts" />
+
 module Infro.SocialApi {
     export interface IUser {
         id: string;
